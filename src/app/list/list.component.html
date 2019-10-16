@@ -1,0 +1,14 @@
+
+  <div >  
+    <form> 
+      
+     <div *ngIf="users.length>0"></div>
+      <div *ngFor="let u of users" >
+        <span> <img src="assets/default-user.png" class="img"/> </span> 
+        <span >
+           {{u.name}} 
+        </span>
+      </div> 
+      
+    </form>  
+  </div>  

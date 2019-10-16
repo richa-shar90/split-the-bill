@@ -1,0 +1,21 @@
+
+  <div >  
+    <form> 
+      
+      <div class="userlist" >
+    <span > Users </span>
+    <br/>
+      <app-list [uList]="users" ></app-list>
+        </div>
+
+      <div class="createuser" >  
+        <span > Create a User </span>
+        <br/>
+        <input type="text" [(ngModel)]="name" name="name" placeholder="Enter Name"/>  
+       <br/>
+        <button type="submit" (click)="addUser()">Add User</button>  
+      </div>
+      
+        
+    </form>  
+  </div>  

@@ -1,0 +1,65 @@
+
+  <div>  
+    <form class="forms"> 
+        <div *ngIf="users==undefined" style="text-align: center">
+        Add users first!
+        </div> 
+
+        <div class="user">
+ 
+        <div *ngIf="users.length>0"> Click on a user to add bill! </div>
+       
+            <div *ngFor="let u of users" (click)="onSelect(u)" class="pointer">
+                <span> <img src="assets/default-user.png" class="img"/> </span> 
+                <span > {{u.name}} </span>
+            </div> 
+        </div>
+        
+
+        <div class="expense">
+        <div *ngIf="selectedUserid>0">
+      
+        Paid by User:
+        <span *ngIf="selectedUserid>0"> {{selectedUsername}}</span>
+        
+        </div>
+        <div *ngIf="selectedUserid>0" style="margin-top:10px">
+          
+          <input *ngIf="selectedUserid>0" type="number" class="form-control" [(ngModel)]="selectedUserexpense" 
+          name="exp" placeholder="Add Amount" /> 
+
+        </div>
+       <br/>
+       
+            
+          <div *ngIf="selectedUserid>0 && restUsers.length>0">
+
+            Click on a friend to Split bill!
+
+             <div *ngFor="let u of restUsers" 
+                (click)="addFriends(u)" class="pointer">
+                <span> <img src="assets/default-user.png" class="img"/> </span> 
+               <span> {{u.name}} </span>
+              </div> 
+     
+               <br/>
+                  <span *ngIf="friendArr.length>0">Friends Added: </span>
+                <span >{{friends}}</span>
+                <br/>
+                
+               
+          </div>
+
+          <div *ngIf="selectedUserid>0  ">  
+        <button type="submit" *ngIf="selectedUserid>0" (click)="addExpense(selectedUserexpense,selectedUserid )" >Add Expense</button>  
+      </div>
+
+        <div *ngFor="let e of error" style="color:red">
+         {{e}}
+        </div>
+
+      </div>
+
+      
+    </form>  
+  </div>  

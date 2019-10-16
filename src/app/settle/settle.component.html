@@ -1,0 +1,23 @@
+  <div >  
+    <form class="frm"> 
+      
+       <table style="width:100%; text-align:center" *ngIf="newExp.length>0">
+          <tr >
+            <td style="width:30%; color: #3f51b5">Paid By</td>
+              <td style="width:30%;color: #3f51b5">Paid To</td>
+              <td style="width:30%; color: #3f51b5">Amount</td>
+          </tr>
+          <tr *ngFor="let u of newExp"  >
+              <td >{{u.fromName}}</td>
+              <td >{{u.toName}}</td>
+              <td >{{u.amount}}</td>
+              
+         </tr>  
+
+      </table>
+        
+    </form>  
+  </div>  
+
+
+  

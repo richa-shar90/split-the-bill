@@ -1,0 +1,33 @@
+
+$fgcolor : #3f51b5;
+$bgcolor : white;
+$fontfam: Roboto,Helvetica Neue,sans-serif;
+
+a 
+{
+    padding: 10px;
+    text-transform: uppercase;
+    color: $fgcolor;
+    text-decoration: blink;
+    background: $bgcolor;
+    border-radius: 4px;
+    box-shadow: $bgcolor;
+    margin-right: 20px;
+    font: $fontfam;
+}
+
+nav{
+    text-align:center; 
+    float:right;
+}
+
+.maindiv{
+    text-align:center;
+    background: $fgcolor;
+    height: 40px;
+    color: $bgcolor;
+    font-size: 30px; 
+    font-family:$fontfam;
+    //margin-left: 150px;
+}
+
